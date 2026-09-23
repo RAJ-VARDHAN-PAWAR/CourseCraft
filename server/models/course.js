@@ -20,6 +20,10 @@ const courseSchema = new mongoose.Schema({
         type : Number,
         required: true
     },
+    level : {
+        type : String,
+        required : true
+    }, 
     duration : {
         type : Number,
         required : true
