@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+
 const courseSchema = new mongoose.Schema({
     title:{
         type: String,
@@ -9,7 +10,8 @@ const courseSchema = new mongoose.Schema({
         required : true
     },
     instructor : {
-        type : String,
+        type : mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required : true
     },
     category : {
